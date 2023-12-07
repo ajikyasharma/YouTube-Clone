@@ -2,7 +2,7 @@ import React from 'react'
 
 function MainVideo() {
   return (
-    <div>MainVideo</div>
+    <div >MainVideo</div>
   )
 }
 

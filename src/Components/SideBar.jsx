@@ -33,10 +33,10 @@ const SideBar = forwardRef(({ showSideBar }, ref) => {
         </div>
 
         <div className="flex flex-col">
-          <NavLink
+        <NavLink
             to="/"
             className={({ isActive }) =>
-              `rounded mx-2 mb-2 pt-2${
+              `rounded mx-2 mb-2 pt-2 ${
                 isActive
                   ? " text-white bg-gray-700 "
                   : "text-gray-400 hover:bg-gray-100 hover:text-gray-700"

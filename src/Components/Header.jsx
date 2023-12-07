@@ -26,15 +26,15 @@ function Header({ setShowSideBar, showSideBar }) {
           onClick={() => setShowSideBar(!showSideBar)}
         />
       </div>
-      <div className="">
-          <form>
-            <input className="w-60 h-10 rounded bg-transparent border border-gray-400 text-gray-700 p-2" type="text" placeholder="Search here..." />
-            <input className="w-20 h-10 rounded text-white bg-red-600 ml-3" type="submit" value="Search"/>
+      <div >
+          <form className="flex flex-row">
+            <input className="w-40 md:w-60 h-10 rounded bg-transparent border border-gray-400 text-gray-700 p-2" type="text" placeholder="Search here..." />
+            <input className="w-15 text-sm md:text-md md:w-20 h-10 rounded text-white bg-red-600 ml-1 md:ml-3" type="submit" value="Search"/>
           </form>
       </div>
       <div className="flex items-center pr-4 md:pr-16">
         <Popover className="relative">
-          <Popover.Button className="outline-none mr-5 md:mr-8 cursor-pointer text-gray-500">
+          <Popover.Button className="outline-none ml-1 mr- md:mr-8 cursor-pointer text-gray-500">
             <BellIcon className="h-6 w-6" />
           </Popover.Button>
           <Transition

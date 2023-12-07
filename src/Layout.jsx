@@ -29,7 +29,7 @@ function Layout() {
   }, []);
 
   return (
-    <div className="flex flex-row h-screen w-screen bg-neutral-100 overflow-hidden">
+    <div className="flex flex-row  bg-neutral-100 overflow-hidden">
       <Transition
         as={Fragment}
         show={showSideBar}
