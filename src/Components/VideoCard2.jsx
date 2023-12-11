@@ -18,10 +18,10 @@ function VideoCard2({video, setMainVideo}) {
             <div className=' md:rounded-xl overflow-hidden'>
             <img   src={video.snippet.thumbnails.high.url} />
             </div>
-            <div className='col-span-2 p-2 md:pt-6'>
-            <p className="text-md md:text-2xl ">{video.snippet.description}</p>
+            <div className='col-span-2 p-4  md:pt-6'>
+            <p className="text-md md:text-xl ">{video.snippet.description}</p>
             <br></br>
-    <p className=" text-sm md:text-xl pl-4 pb-2">{video.snippet.channelTitle}</p>
+    <p className=" text-sm md:text-lg text-gray-500 pl-4 pb-2">{video.snippet.channelTitle}</p>
             </div>
 
 

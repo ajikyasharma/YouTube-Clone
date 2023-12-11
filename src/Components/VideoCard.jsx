@@ -15,7 +15,7 @@ function VideoCard({ video, setMainVideo }) {
     <img   src={video.snippet.thumbnails.high.url} />
     </div>
     <p className="text-md pl-4">{video.snippet.description}</p>
-    <p className="text-sm pl-4 pb-2 ">{video.snippet.channelTitle}</p>
+    <p className="text-sm text-gray-500 pl-4 pb-2 ">{video.snippet.channelTitle}</p>
     </div>;
 }
 
