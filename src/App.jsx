@@ -12,14 +12,15 @@ const App= ()=>{
 
 const [videos, setVideos] = useState([])
 const [mainVideo, setMainVideo] = useState([])
+const [searchTerm, setSearchTerm] =useState('')
 
-async function handleSubmit(searchTerm){
+async function handleSubmit(word){
   const response = await youtube.get("search",{
      params:{
        part:"snippet",
        maxResults:48,
        key:"AIzaSyBn1UI36ZjsSGyiXSTBNdbYVM5l5Igzjq4",
-       q:searchTerm
+       q:word
      }
    })
      setVideos(response.data.items)
@@ -27,19 +28,19 @@ async function handleSubmit(searchTerm){
 
 useEffect(()=>{
   console.log("hello")
-  handleSubmit('doremon')
+  handleSubmit(searchTerm)
   console.log("Bye")
-},[])
+},[searchTerm])
 
 
 
 
   const router = createBrowserRouter(
     createRoutesFromElements(
-      <Route path="/" element={<Layout />}>
-        <Route path="/" element={<Feed  videos={videos}/>} />
-        <Route path="/searchresult" element={<SearchResult />} />
-        <Route path="/mainvideo" element={<MainVideo />} />
+      <Route path="/" element={<Layout setSearchTerm={setSearchTerm}/>}>
+        <Route path="/" element={<Feed  videos={videos} setMainVideo={setMainVideo}/>} />
+        <Route path="/searchresult" element={<SearchResult videos={videos} setMainVideo={setMainVideo}/>} />
+        <Route path="/mainvideo" element={<MainVideo videos={videos} mainVideo={mainVideo} setMainVideo={setMainVideo}/>} />
       </Route>
     )
   );

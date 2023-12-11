@@ -10,10 +10,27 @@ import {
   PencilIcon,
   UserIcon,
 } from "@heroicons/react/24/solid";
-import React, { Fragment } from "react";
-import { Link } from "react-router-dom";
+import React, { Fragment, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
-function Header({ setShowSideBar, showSideBar }) {
+function Header({ setShowSideBar, showSideBar,setSearchTerm }) {
+
+  const navigate= useNavigate()
+
+
+  const [input, setInput]= useState('')
+
+
+  const submitHandler =(e)=>{
+       e.preventDefault()
+       setSearchTerm(input)
+
+       navigate('/searchresult')
+
+       setInput('')
+  }
+
+
   return (
     <div
       className={`fixed w-full h-16 flex justify-between items-center transition-all duration-[400ms] bg-black  text-white ${
@@ -27,8 +44,8 @@ function Header({ setShowSideBar, showSideBar }) {
         />
       </div>
       <div >
-          <form className="flex flex-row">
-            <input className="w-40 md:w-60 h-10 rounded bg-transparent border border-gray-400 text-gray-700 p-2" type="text" placeholder="Search here..." />
+          <form className="flex flex-row" onSubmit={submitHandler}>
+            <input className="w-40 md:w-60 h-10 rounded bg-transparent border border-gray-400 text-gray-300 p-2" type="text" placeholder="Search here..."  value={input}  onChange={(e)=>setInput(e.target.value)}/>
             <input className="w-15 text-sm md:text-md md:w-20 h-10 rounded text-white bg-red-600 ml-1 md:ml-3" type="submit" value="Search"/>
           </form>
       </div>

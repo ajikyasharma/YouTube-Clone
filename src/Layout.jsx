@@ -4,7 +4,7 @@ import SideBar from "./Components/SideBar";
 import Header from "./Components/Header";
 import { Transition } from "@headlessui/react";
 
-function Layout() {
+function Layout({setSearchTerm}) {
   const [showSideBar, setShowSideBar] = useState(true);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -44,10 +44,10 @@ function Layout() {
       </Transition>
 
       <div className="flex-1">
-        <Header setShowSideBar={setShowSideBar} showSideBar={showSideBar} />
+        <Header setShowSideBar={setShowSideBar} showSideBar={showSideBar} setSearchTerm={setSearchTerm}/>
         <div
-          className={`pt-20 p-4 transition-all duration-[400ms] ${
-            showSideBar && !isMobile ? "pl-60 p-4" : ""
+          className={`pt-16  transition-all duration-[400ms] ${
+            showSideBar && !isMobile ? "pl-56 " : ""
           }`}
         >
           <Outlet className="px-4 md:px-16" />
