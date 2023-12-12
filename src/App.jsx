@@ -41,6 +41,14 @@ useEffect(()=>{
         <Route path="/" element={<Feed  videos={videos} setMainVideo={setMainVideo}/>} />
         <Route path="/searchresult" element={<SearchResult videos={videos} setMainVideo={setMainVideo}/>} />
         <Route path="/mainvideo" element={<MainVideo videos={videos} mainVideo={mainVideo} setMainVideo={setMainVideo}/>} />
+        <Route path="/trending" element={<Feed  videos={videos} setMainVideo={setMainVideo}/>} />
+        <Route path="/music" element={<Feed  videos={videos} setMainVideo={setMainVideo}/>} />
+        <Route path="/films" element={<Feed  videos={videos} setMainVideo={setMainVideo}/>} />
+        <Route path="/live" element={<Feed  videos={videos} setMainVideo={setMainVideo}/>} />
+        <Route path="/game" element={<Feed  videos={videos} setMainVideo={setMainVideo}/>} />
+        <Route path="/settings" element={<Feed  videos={videos} setMainVideo={setMainVideo}/>} />
+        <Route path="/report" element={<Feed  videos={videos} setMainVideo={setMainVideo}/>} />
+        <Route path="/help" element={<Feed  videos={videos} setMainVideo={setMainVideo}/>} />
       </Route>
     )
   );

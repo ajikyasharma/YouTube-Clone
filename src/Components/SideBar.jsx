@@ -97,7 +97,7 @@ const SideBar = forwardRef(({ showSideBar }, ref) => {
             </div>
           </NavLink>
           <NavLink
-            to="/film"
+            to="/films"
             className={({ isActive }) =>
               `rounded mx-2 mb-2 mt-2 ${
                 isActive
