@@ -14,7 +14,7 @@ function VideoCard3({video, setMainVideo}) {
 
 
   return (
-    <div className=' rounded-xl bg-black text-white overflow-hidden mb-3' onClick={(e)=>clickHandler(e)}>
+    <div className=' rounded-xl bg-black text-white overflow-hidden mb-3 cursor-pointer' onClick={(e)=>clickHandler(e)}>
          <div className='max-w-screen-sm grid grid-cols-3 '>
             <div className=' rounded-xl overflow-hidden'>
             <img   src={video.snippet.thumbnails.high.url} />
