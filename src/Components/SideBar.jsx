@@ -24,8 +24,9 @@ const SideBar = forwardRef(({ showSideBar }, ref) => {
         <div className="flex justify-center mt-6 mb-8 ">
           <picture>
             <img
-              className="my-2 "
-              src="src/Images/yt-logo.png"
+              className="mr-5 "
+              // src="src/Images/yt-logo.png"
+               src="https://betanews.com/wp-content/uploads/2017/08/new-youtube-logo.jpg"
               width={120}
               alt="logo"
             />
